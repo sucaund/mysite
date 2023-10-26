@@ -1,0 +1,422 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+}
+a { color: black; }
+.title {
+    font-size: 1.5rem;
+    line-height: 70px;
+}
+/* 깜싸는 전체 높이 2000px */
+.wrap {
+    width: 100%; 
+    height: 2000px;
+    border: 0px solid red;
+    
+}
+.wrap nav {
+    width: 100%; height: 50px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+.wrap nav div {
+    flex: 1; height: 50px;
+    border: 0px solid green;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+} 
+.wrap nav div:hover {
+    color: red;
+}
+/* 부모 wrap 높이 2000px이므로 sec 높이도 2000px */
+.wrap .sec {
+    width: 100%; 
+    /* height: 100%; */
+
+    margin-top: 30px;
+    border: 0px solid black;
+    display: flex;
+}
+
+
+/* 갤러리 메뉴를 클릭하면 보여지는 Section(#sec5) 시작 */
+.sec5Box {
+    width: 80%; 
+    margin: 20px auto;
+    border: 0px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+.sec5Box li {
+    width: 18%; height: 200px;
+    border: 1px solid black;
+}
+
+
+
+/* 갤러리 메뉴를 클릭하면 보여지는 Section(#sec5) 끝 */
+
+
+
+
+
+
+
+/* 경제 메뉴를 클릭하면 보여지는 Section(#sec1) */
+#sec1 {
+    display: none;
+}
+#sec1 .sec1Bg {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1;
+    width: 100%; height: 100%;
+    background: black;    
+}
+#sec1 .sec1Bg video {
+    width: 100%;
+    /* height: 100%; */
+    min-width: 1500px;
+}
+#sec1 .sec1Bg .sec1Bg_skip {
+    position: absolute;
+    bottom: 50px; left: 50%;
+    z-index: 10;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+
+
+/* 문화 메뉴를 클릭하면 보여지는 Section(#sec2) */
+#sec2 {
+    display: none;
+}
+#sec2 {
+         
+}
+
+
+
+
+/* 초기 화면에 보여지는 Section(.sec) */
+.sec> div {
+    position: relative;
+    top: 0; left: 0;
+
+    width: 10%;
+    border: 1px solid orange;    
+}
+.sec> div> p {
+    width: 100%; height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.sec div .sleepBox {
+    position: absolute;
+    top: 50px; left: 0;
+    width: 1000%; 
+    border: 0px solid blue;
+}
+/* 갤러리(div.box1) 높이는 부모 sec 높이와 같은 2000px */
+.sec .box1 {  /* 갤러리  */
+    width: 10%;
+    /* height: 100%; */
+}
+/* 이미지 슬라이드 */
+.sec .box1 .sleepBox .big {
+    position: relative;
+    top: 0; left: 0;
+
+    width: 1000px; 
+    height: 500px;
+    border: 3px solid black;
+    overflow: hidden;
+}
+.sec .box1 .sleepBox .big .img5 {
+    position: absolute;
+    top: 0; left: 0;
+
+    width: 6000px;
+    height: 100%;
+    border: 0px solid green;
+    display: flex;
+    animation: img5_ani 20s linear infinite;
+
+
+}
+/* @keyframes img5_ani {
+    0% { left: 0px; }
+    2% { left: -100%; }
+    20% { left: -100%; }
+    22% { left: -200%; }
+    40% { left: -200%; }
+    42% { left: -300%; }
+    60% { left: -300%; }
+    62% { left: -400%; }
+    80% { left: -400%; }
+    82% { left: -500%; }    
+    100% { left: -500%; }
+} */
+@keyframes img5_ani {
+    0% { left: 0px; }
+    2% { left: -1000px; }
+    20% { left: -1000px }
+    22% { left: -2000px; }
+    40% { left: -2000px; }
+    42% { left: -3000px; }
+    60% { left: -3000px; }
+    62% { left: -4000px; }
+    80% { left: -4000px; }
+    82% { left: -5000px; }    
+    100% { left: -5000px; }
+}
+
+
+.sec .box1 .sleepBox .big .img5 li {
+    width: 1000px; height: 100%;
+    border: 0px solid red;
+    font-size: 3rem;
+}
+.sec .box1 .sleepBox .big .img5 li div {
+    width: 700px; text-align: right;
+    margin: 50px auto;
+    font-size: 2rem;
+}
+
+
+.sec .box1 .sleepBox .big .img5 li:nth-child(1) {
+    background: url(../img/img1.png);
+    background-size: 100% 100%;
+}
+.sec .box1 .sleepBox .big .img5 li:nth-child(2) {
+    background: url(../img/img2.png);
+    background-size: 100% 100%;
+}
+.sec .box1 .sleepBox .big .img5 li:nth-child(3) {
+    background: url(../img/img3.png);
+    background-size: 100% 100%;
+}
+.sec .box1 .sleepBox .big .img5 li:nth-child(4) {
+    background: url(../img/img4.png);
+    background-size: 100% 100%;
+}
+.sec .box1 .sleepBox .big .img5 li:nth-child(5) {
+    background: url(../img/img5.png);
+    background-size: 100% 100%;
+}
+.sec .box1 .sleepBox .big .img5 li:nth-child(6) {
+    background: url(../img/img1.png);
+    background-size: 100% 100%;
+}
+
+
+
+
+
+
+.sec div .bus {
+    position: absolute;
+    top: 50px; left: -100%;
+    z-index: 10;
+
+    width: 1000%; 
+    border: 0px solid green;    
+}
+.sec .box1:hover div {
+    display: block;
+}
+/* box1(갤러리)을 오버하면 box2(교통이 안보임) */
+/* .sec .box1:hover div {
+    display: block;
+}
+.sec .box2:hover div {
+    display: block;
+} */
+.sec .box {
+    background: white;
+    /* display: none; */
+    height: 700px;
+    padding: 30px;
+    /* background: orange; */
+}
+
+/* .sec .box1 {
+    display: block;
+}
+.sec .box2 {
+    display: block;
+} */
+
+
+
+
+
+/* 작은 그림 5개 */
+.smallImg5 {
+    position: absolute;
+    top: 950px; left: 50%;
+    transform: translateX(-50%);
+
+    width: 600px; height: 150px;
+    border: 1px solid black;
+    
+    display: flex;
+    justify-content: space-between;
+    /* background: teal;
+     */
+}
+.smallImg5 li {
+    width: 100px; height: 100%;
+}
+.smallImg5 li img {
+    width: 100%; height: 100%;
+}
+
+/* 전체 화면을 검정- 큰 그림 나오는 아이디 */
+#full {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    color: white;
+}
+#fullClose {
+    position: absolute;
+    top: 100px; right: 100px;
+    width: 50px; height: 50px;
+    border: 1px solid white;
+}
+.fullImg {
+    position: absolute;
+    top: 100px; left: 100px;
+    width: 500px; height: 300px;
+    border: 1px solid #ccc;
+}
+.fullImg img {
+    width: 100%; height: 100%;
+}
+
+/* 교통탭 메뉴 작성 시작 */
+.sec .box2 {
+    
+}
+.sec .box2 .bus {
+    
+}
+.sec .box2 p {
+    border: 1px solid red;
+}
+.sec .box2 .box2Title {
+    width: 80%; height: 50px;
+    background: black;
+    color: white;
+    line-height: 50px;
+    text-indent: 50px;
+}
+.sec .box2 .box2Title small {
+    color: red;    
+}
+.sec .box2 .both {
+    position: relative;
+    top: 0; left: 0;
+
+    margin: 30px auto;
+    width: 80%; height: 70px;
+    border: 1px solid orange;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+.sec .box2 .both div:first-child {
+    width: 49%;
+    background: pink;
+}
+.sec .box2 .both div:nth-child(2) {
+    width: 49%;
+    background: plum;
+}
+
+.sec .box2 .one {
+    position: absolute;
+    top: -25px; left: 30% ;
+
+    width: 150px; height: 150px;
+    background: purple;
+    border-radius: 100%;
+    /* 원 안에 배경 그림 넣기 */
+    background: url(../img/img1.png);
+    background-size: 100% 100%;
+
+}
+.sec .box2 .bus .box2Img5 {
+    width: 80%; height: 300px;
+    border: 0px solid red;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.sec .box2 .bus .box2Img5 ul {
+    width: 18%; height: 100%;
+    border: 0px solid black;
+}
+.sec .box2 .bus .box2Img5 ul li {
+    width: 100%; height: 30px;
+    border: 0px solid blue;
+    /* text-align: center; */
+    line-height: 30px;
+    text-indent: 20px;
+    overflow: hidden;
+}
+.sec .box2 .bus .box2Img5 ul li img:hover {
+    transform: scale(1.2);
+}
+.sec .box2 .bus .box2Img5 ul li img {
+    width: 90%; height: 90%;    
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.sec .box2 .bus .box2Img5 ul li:first-child {
+    height: 180px;
+    text-align: center;
+}
+
+
+
+
+section {
+    display: none;
+}
+#sec0 {
+    display: none;
+}
+#sec1 {
+    display: none;
+}
+#sec2 {
+    display: none;
+}
+#sec3 {
+    display: none;
+}
+#sec4 {
+    display: none;
+}
+#sec5 {
+    display: block;
+}
+#smallImg5 {
+    display: none;
+}
