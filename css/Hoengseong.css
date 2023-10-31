@@ -9,9 +9,13 @@ body{
 }
 a{color: black;}
 .title {
+    /* text-align: center; */
     font-size: 1.5rem;
     line-height: 70px;}
     
+.title span{
+    color: rgba(131, 13, 13, 0.986);
+}
 
 /* 부모 wrap 높이 2000 이므로 sec높이도 2000이다. */
 .wrap{
@@ -57,11 +61,71 @@ a{color: black;}
     display: flex;
 }
 
-/* ========================================================================= */
 
 
 
 
+/* ================================▼모임메뉴 sec4▼====================================== */
+
+
+
+
+/* sec6 효성 */
+
+.sec6_box1{
+    width: 1200px; height: 300px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec6_box1 div{
+    position: relative;
+    top: 0; height: 0;
+
+    width: 250px; height: 300px;
+    border: 1px solid red;
+}
+.sec6_box1 div .sec6_box_img{
+    width: 200px;  height: 200px;
+    border: 3px solid green;
+    margin: 50px auto;
+    background: url(/img/img1.jpg);
+    background-size: 100% 100%;
+}
+/* 그림 대신 문장 */
+.sec6_box1 div .sec6_box1_child{
+    width: 200px;  height: 200px;
+    border: 1px solid green;
+    margin: 50px auto;
+    background:  blue;
+    position: absolute;
+    top: 0; left: 18px;
+    display: none;
+    color: aliceblue;
+}
+
+.sec6_box1 div .sec6_box1_child p{
+    color: white;
+}
+
+
+/* js 제이쿼리에서 마우스를올리면 화면이 나오는걸 구현하겠다. */
+/* .sec6_box1 div:hover .sec6_box1_child{
+    display: block;
+} */
+
+
+
+
+
+
+
+
+
+
+/* ============================================================================================ */
 
 
 
@@ -154,6 +218,23 @@ width: 200px;
 
 
 /* 문화메뉴 끝 */
+/* =================================================================================== */
+/* sec3 점심메뉴 시작 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -322,27 +403,27 @@ width: 200px;
 }
 /* 갤러리1 내부에 들어가는 사진들 출처 */
 .sec .box1 .sleepBox .big .img5 li:nth-child(1){
-    background: url(/img/img0.jfif);
+    background: url(/img/img0.jpg);
     background-size: 100% 100%;
 }
 .sec .box1 .sleepBox .big .img5 li:nth-child(2){
-    background: url(/img/img1.jfif);
+    background: url(/img/img1.jpg);
     background-size: 100% 100%;
 }
 .sec .box1 .sleepBox .big .img5 li:nth-child(3){
-    background: url(/img/img2.jfif);
+    background: url(/img/img2.jpg);
     background-size: 100% 100%;
 }
 .sec .box1 .sleepBox .big .img5 li:nth-child(4){
-    background: url(/img/img3.jfif);
+    background: url(/img/img3.jpg);
     background-size: 100% 100%;
 }
 .sec .box1 .sleepBox .big .img5 li:nth-child(5){
-    background: url(/Hoengseong/img/ski.jpg);
+    background: url(/img/img4.jpg);
     background-size: 100% 100%;
 }
 .sec .box1 .sleepBox .big .img5 li:nth-child(6){
-    background: url(/Hoengseong/img/cow.jfif);
+    background: url(/img/img5.jpg);
     background-size: 100% 100%;
 }
 
@@ -410,8 +491,9 @@ width: 200px;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(173, 21, 21, 0.466);
-    display: block;
+    display: none;
     color: white;
+    z-index: 100;
 }
 
 #fullClose{
@@ -496,7 +578,7 @@ width: 200px;
         background: purple;
         border-radius: 100%;
         /* 원안에 배경그림 넣기 */
-        background: url(/Hoengseong/img/duduck.jpg);
+        background: url(/img/img7.jpg);
         background-size:  100% 100%;
     }
 
@@ -573,6 +655,8 @@ width: 200px;
     }
 
 
+
+
 section{
     display: none;
 }
@@ -583,13 +667,13 @@ section{
     display: none;
 }
 #sec2{
-    display: block;
+    display: none;
 }
 #sec3{
     display: none;
 }
 #sec4{
-    display: none;
+    display: block;
 }
 #sec5{
     display: none;
@@ -597,8 +681,17 @@ section{
 #smallImg5 {
     display: none;
 }
+#sec6{
+    display: none;
+}
+
+
+
+
+
+
 #sec1 .sec1Bg .sec1bg_skip{
     position: absolute;
     bottom: 50px; left: 50%;
     color: white;
-}
+} 

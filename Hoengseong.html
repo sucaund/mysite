@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/Hoengseong.css">
+    <link rel="stylesheet" href="/css/h2.css">
+    <link rel="stylesheet" href="/Sec4.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/Hoengseong.js"></script>
+    <script src="/h2.js"></script>
+    <script src="/js/sec4.js"></script>
 
 </head>
 
 <body>
-    <p class="title">
-        횡성입니다.
-    </p>
+    <div class="title">
+    <h1>횡성 금수장 <span>禽獸莊</span></h1>
+    </div>
 <script>
         function section_func(js){
             smallImg5.style.display="none";
@@ -23,6 +27,7 @@
             sec3.style.display="none";
             sec4.style.display="none";
             sec5.style.display="none";
+            sec6.style.display="none";
             if(js==0){
                 sec0.style.display="flex";
                 smallImg5.style.display="flex";
@@ -43,7 +48,16 @@
             else if(js==5){       //갤러리
                 sec5.style.display="block";
             }    
+            else if(js==6){       //효성
+                sec6.style.display="block";
+            }    
         }
+
+        function func(js){
+        console.log (js);
+        full.style.display="block";
+        fullPic.src="img/" +js;
+    }
 </script>
 
 
@@ -52,11 +66,65 @@
             <div onclick="section_func(0)">홈으로</div>
             <div onclick="section_func(1)">경제</div>
             <div onclick="section_func(2)">문화</div>
-            <div onclick="section_func(3)">스포츠</div>    
+            <div onclick="section_func(3)">가이드</div>    
             <div onclick="section_func(4)">모임</div>    
             <div onclick="section_func(5)">갤러리</div>    
+            <div onclick="section_func(6)">효성</div>    
     </nav>
         
+        
+        <!-- 효성-->
+        <section id="sec6"> 
+            <div class="sec6_title">
+                iam 효성 이에요
+            </div>
+        <div class="sec6_box1">
+            <div>
+                <div class="sec6_box_img sec6_box_img1"></div>
+                <div class="sec6_box1_child sec6_box1_child1">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="sec6_box_img sec6_box_img2"></div>
+                <div class="sec6_box1_child sec6_box1_child2">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+            </div>
+            <div>
+                <div class="sec6_box_img sec6_box_img3"></div>
+                <div class="sec6_box1_child sec6_box1_child3">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+            </div>
+            <div>
+                <div class="sec6_box_img sec6_box_img4"></div>
+                <div class="sec6_box1_child sec6_box1_child4">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+            </div>
+            <div>
+                <div class="sec6_box_img sec6_box_img5"></div>
+                <div class="sec6_box1_child sec6_box1_child5">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        </section>
         
         <!-- 갤러리메뉴 ,js로 사진 삽입-->
         <section id="sec5"> 
@@ -121,9 +189,9 @@
                     <p>자세히 알아보기</p>
                 </li>
                 <li>
-                    <div class="sec2right"><img src="img/img1-1.jpg"></div>
-                    <div class="sec2right"><img src="img/img6.jfif"></div>
-                    <div class="sec2right"><img src="img/img6.jfif"></div>
+                    <div class="sec2right"><img src="img/img1.jpg"></div>
+                    <div class="sec2right"><img src="img/img4.jpg"></div>
+                    <div class="sec2right"><img src="img/img5.jpg"></div>
                 </li>
             </ul>
         </section>
@@ -144,16 +212,134 @@
         <!-- 스포츠메뉴 -->
         <section id="sec3"> 
             <div class="sec3_title">
-                스포츠화면
+                여행 가이드
             </div>
+            
+            <div class="layout">
+                <!-- 한식,분식,중식,양식 선택한 음식 종류 표시 -->
+                <ul class="wrap3">
+                    <li class="box0"></li>
+                    <li class="box1"></li>
+                    <li class="box2"></li>
+                    <li class="box3"></li>
+                </ul>
+                <!-- 한식,분식,중식,양식 선택한 음식그림과 가격 표시 -->
+                <ul class="imgText">
+                    <li>
+                        <div class="img">
+                            <img src="/img/img0.jpg" alt="" class="pic">
+                        </div>
+                        <div class="text"></div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!-- 한식,분식,중식,양식 선택한 음식 종류 콤보박스 -->
+                <div class="combo_box">
+                        <select name="" id="sel" onchange="func_ch(this)">
+                            <option value="1"> 선택하세요</option>
+                            <option value="2"> 천진분식</option>
+                            <option value="3"> 육수당</option>
+                            <option value="4">중화반점</option>
+                            <option value="5">대왕 돈까스</option>
+                            <option value="6">떡볶이 맛집</option>
+                            <option value="7">김밥천국 24시</option>
+                            <option value="8">퓨전요리점</option>
+                            <option value="9">맛있다 왕칼국수</option>
+                            <option value="10">집밥 백반 식당</option>
+                        </select>
+                </div>
+            </div>
+            <div class="btn3">
+            <button class="start">선택시작</button>
+            <button class="again">다시하기</button>
+            
+            </div>
+
         </section>
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- 모임메뉴 -->
         <section id="sec4"> 
             <div class="sec4_title">
                 모임 화면
             </div>
+            <ul class="sec4_menu">
+                <li>
+                    <p class="sec4_menu0">먹거리</p>
+                    <ul class="sec4_sub1">
+                        <li class="sec4_subMenu1">특산품</li>
+                        <li class="sec4_subMenu2">기념음식</li>
+                        <li class="sec4_subMenu3">맛집소개</li>
+                        <li class="sec4_subMenu4">착한식당</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <p class="sec4_menu1">볼거리</p>
+                    <ul class="sec4_sub2">
+                        <li class="sec4_subMenu5">특산품</li>
+                        <li class="sec4_subMenu6">기념음식</li>
+                        <li class="sec4_subMenu7">맛집소개</li>
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <p class="sec4_menu2">재미거리</p>
+                    <ul class="sec4_sub3">
+                        <li class="sec4_subMenu9">특산품</li>
+                        <li class="sec4_subMenu10">기념음식</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <p class="sec4_menu3">참여마당</p>
+                    <ul class="sec4_sub4">
+                        <li class="sec4_subMenu13">특산품</li>
+                        <li class="sec4_subMenu14">기념음식</li>
+                        <li class="sec4_subMenu15">맛집소개</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <p class="sec4_menu4">아카데미</p>
+                    <ul class="sec4_sub5">
+                        <li class="sec4_subMenu17">특산품</li>
+                        <li class="sec4_subMenu18">기념음식</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- 메뉴창 하단 본문내용 -->
+            <article class="sec4_at0 sec4_at">
+                <div class="big_img4"></div>
+            </article>
         </section>
+
+
+
+
+
+
+
+
 
 
         <!-- 초기화면에 보여지는 section(.sec) 홈 -->
@@ -194,7 +380,7 @@
                     <div class="box2Img5">
                     <ul>
                         <li>
-                            <img src="/Hoengseong/img/summercell.jpg" alt="">
+                            <img src="/img/img2.jpg" alt="">
                         </li>
                         <li>상품명:지도책</li>
                         <li>가격:5000원</li>
@@ -204,7 +390,7 @@
                         
                     <ul>
                             <li>
-                            <img src="/Hoengseong/img/summercell.jpg" alt="">
+                            <img src="/img/img7.jpg" alt="">
                         </li>
                         <li>상품명:지도책</li>
                         <li>가격:5000원</li>
@@ -214,7 +400,7 @@
                     
                     <ul>
                             <li>
-                                <img src="/Hoengseong/img/summercell.jpg" alt="">
+                                <img src="/img/img2.jpg" alt="">
                             </li>
                             <li>상품명:지도책</li>
                             <li>가격:5000원</li>
@@ -224,7 +410,7 @@
                         
                         <ul>
                             <li>
-                                <img src="/Hoengseong/img/summercell.jpg" alt="">
+                                <img src="/img/img6.jpg" alt="">
                             </li>
                             <li>상품명:지도책</li>
                             <li>가격:5000원</li>
@@ -269,13 +455,7 @@
         </div>
     </div>
 
-<script>
-    function func(js){
-        console.log (js);
-        full.style.display="block";
-        fullPic.src="img/" +js;
-    }
-</script>
+
 
 </body>
 </html>

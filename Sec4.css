@@ -1,0 +1,109 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+a{color: black;}
+
+
+#sec4{
+    position: relative;
+    top: 0; left: 0;
+}
+
+#sec4 .sec4_title{
+    font-size: 1.5rem;
+    line-height: 50px;
+}
+/* ul의 포지션 설정하기 */
+.sec4_menu{
+    width: 100%; height: 50px;
+    background: rgb(205, 222, 238);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0; left: 0;
+    z-index: 10;
+}
+.sec4_menu > li{
+    width: 120px;
+    border: 1px solid black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center; line-height: 50px;
+    margin-right: 20px;
+}
+
+/* 섹션4 주메뉴(p) */
+.sec4_menu > li p {
+    width: 100%; height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* 섹션4 주메뉴(p) 속에 서브메뉴중에  */
+/* 마지막에 서브메뉴에 border-bottom 없애기 */
+.sec4_menu > li > ul >li:last-child{
+    border-bottom: none;
+}
+
+.sec4_menu > li > ul{
+    border-top: none;
+}
+
+.sec4_menu > li:hover ul{
+    height: 140px;
+}
+.sec4_menu li:hover .sec4_sub2{
+    height: 105px;
+}
+.sec4_menu li:hover .sec4_sub3{
+    height: 70px;
+}
+.sec4_menu li:hover .sec4_sub4{
+    height: 105px;
+}
+.sec4_menu li:hover .sec4_sub5{
+    height: 70px;
+}
+
+
+
+.sec4_menu > li ul{
+    width: 100%; height: 0  ;
+    border-bottom: 1px dashed rgb(197, 98, 59);
+    overflow: hidden;
+    transition:  all 0.5s;
+}
+
+.sec4_menu > li ul li{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px dashed rgb(209, 179, 58);
+    cursor: pointer;
+    background: wheat;
+}
+
+
+.sec4_menu > li ul li:hover{
+    background: orange;
+}
+
+
+/* 섹션4에서 서브메뉴를 클릭했을떄 내용 */
+.sec4_at{
+    position: absolute;
+    top: 100px; left: 0;
+    width: 100%; height: 3000px;
+    background: lemonchiffon;
+}
+
+/* ===================================본문내용====================================== */
+
+.sec4_at0 div{
+    
+}

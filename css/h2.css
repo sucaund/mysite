@@ -1,0 +1,85 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {color:  black;}
+
+.layout{
+    width: 1000px; height: 400px;
+    padding: 30px;
+    margin: 50px auto;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.wrap3{
+    width: 200px; height: 150px;
+    /* border:  1px solid black; */
+}
+
+.wrap3 li{
+    width: 100%; height: 50px;
+    border: 1px solid blue;
+    border-radius: 15px;
+    line-height: 50px;
+    text-indent: 20px;
+}
+
+
+.imgText{
+    width: 500px; height: 300px;
+    border-radius: 15px;
+    /* border: 11px solid black; */
+}
+.imgText li{ 
+    text-align: center;
+}
+.imgText li .img{
+    height: 250px;
+}
+
+.imgText li .img img{
+    height: 180px;
+    margin-top: 25px;
+}
+
+.imgText li .text{
+    height: 50px;
+    line-height: 50px;
+}
+
+.combo_box {
+    /* position: absolute; */
+    /* top: 50px; left: 70%;  */
+    /* border: 1px solid goldenrod; */
+}
+
+.combo_box select{
+    display: block;
+    width: 100%; height: 40px;
+}
+
+.combo_box select option {
+
+}
+
+.btn3{
+    margin-top: 100px;
+}
+.btn3 button{
+    width: 150px; height: 50px;
+    margin: 20px auto;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.btn3 button:hover{
+    background-color: blue;
+    color: aliceblue;
+
+}
+
+

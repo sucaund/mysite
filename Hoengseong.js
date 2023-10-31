@@ -1,14 +1,17 @@
 let i;
 const sec5A=[
-    "img1.png","img2.png","img3.png","img4.png","img5.png"
+    "img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg"
 ];
 const sec2A=[
-    "img5.png","img2.png","img3.png","img4.png","img5.png"
+    "img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg"
 ];
 const sec5_textA=[
     "동소개","인구소개","읍소개","종합운동장","시내전경"
 ]
 let sec5Box, sec5Box_text;
+
+
+
 window.onload=function() {
     sec5Box=document.querySelector(".sec5Box").getElementsByTagName("li");
     // sec5Box_text=document.querySelector(".sec5Box").getElementsByTagName("div");
@@ -44,8 +47,56 @@ $(function() {
             $(".Big_img5").css("left", "+=1000px");
         });
     })
-})
 
+
+
+
+
+
+
+
+
+
+
+    // ================================================================================
+    //섹션6효성에서 화면에 그림오버하면 색상나오기
+    $(".sec6_box_img").css("cursor","pointer");
+    // 1  
+    $(".sec6_box_img1").on("click",function(){
+        $(".sec6_box1_child1").fadeIn();
+    })
+    $(".sec6_box_img1").on("mouseout",function(){
+        $(".sec6_box1_child1").fadeOut();
+    })
+    // 2
+    $(".sec6_box_img2").on("click",function(){
+        $(".sec6_box1_child1").fadeIn();
+    })
+    $(".sec6_box_img2").on("mouseout",function(){
+        $(".sec6_box1_child1").fadeOut();
+    })
+    // 3
+    $(".sec6_box_img3").on("click",function(){
+        $(".sec6_box1_child1").fadeIn();
+    })
+    $(".sec6_box_img3").on("mouseout",function(){
+        $(".sec6_box1_child1").fadeOut();
+    })
+    // 4
+    $(".sec6_box_img4").on("click",function(){
+        $(".sec6_box1_child1").fadeIn();
+    })
+    $(".sec6_box_img4").on("mouseout",function(){
+        $(".sec6_box1_child1").fadeOut();
+    })
+    // 5
+    $(".sec6_box_img5").on("click",function(){
+        $(".sec6_box1_child1").fadeIn();
+    })
+    $(".sec6_box_img5").on("mouseout",function(){
+        $(".sec6_box1_child1").fadeOut();
+    })
+})
 
 
 

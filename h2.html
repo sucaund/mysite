@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/h2.css">
+    <script src="/js/jquery.3.7.1.js"></script>
+    <script src="h2.js"></script>
+</head>
+<body>
+<div class="layout">
+    <!-- 한식,분식,중식,양식 선택한 음식 종류 표시 -->
+    <ul class="wrap3">
+        <li class="box0"></li>
+        <li class="box1"></li>
+        <li class="box2"></li>
+        <li class="box3"></li>
+    </ul>
+    <!-- 한식,분식,중식,양식 선택한 음식그림과 가격 표시 -->
+    <ul class="imgText">
+        <li>
+            <div class="img">
+                <img src="/img/img0.jpg" alt="" class="pic">
+            </div>
+            <div class="text"></div>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- 한식,분식,중식,양식 선택한 음식 종류 콤보박스 -->
+    <div class="combo_box">
+            <select name="" id="sel" onchange="func_ch(this)">
+                <option value="1"> 선택하세요</option>
+                <option value="2"> 천진분식</option>
+                <option value="3"> 육수당</option>
+                <option value="4">중화반점</option>
+                <option value="5">대왕 돈까스</option>
+                <option value="6">떡볶이 맛집</option>
+                <option value="7">김밥천국 24시</option>
+                <option value="8">퓨전요리점</option>
+                <option value="9">맛있다 왕칼국수</option>
+                <option value="10">집밥 백반 식당</option>
+            </select>
+    </div>
+</div>
+<div class="btn3">
+<button class="start">선택시작</button>
+<button class="again">다시하기</button>
+
+</div>
+</body>
+</html>
